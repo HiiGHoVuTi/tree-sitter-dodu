@@ -1,0 +1,24 @@
+{
+  "name": "tree-sitter-dodu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "grammar.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Maxime",
+  "license": "ISC",
+  "tree-sitter": [
+    {
+      "scope": "source.du",
+      "file-types": [
+        "du",
+        "dodu"
+      ],
+      "injection-regex": "#!.*\\bdodu$"
+    }
+  ],
+  "dependencies": {
+    "nan": "^2.16.0"
+  }
+}

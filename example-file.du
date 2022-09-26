@@ -1,0 +1,4 @@
+hello <- hello (and world), world hello.
+hello <- \n. world.
+hello <- @(hello <- x.) world.
+hello <- [1 ; 2 ; 3].

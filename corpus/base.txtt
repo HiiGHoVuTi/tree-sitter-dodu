@@ -1,0 +1,8 @@
+=====
+A short example program
+=====
+
+hello <- f x.
+
+---
+program
