@@ -43,11 +43,18 @@ module.exports = grammar({
       $._expression
     ),
     _composition: $ => seq(
-      $._application, ",", $._application
+      $._application, ",", $._expression
+    ),
+    _train: $ => seq(
+      "{", choice(
+        seq(alias($._term, $.function), $._term),
+        seq($._term, alias($._term, $.function), $._term)
+      ), "}"
     ),
     _term: $ => choice(
       $.literal,
       $.identifier,
+      $._train,
       seq("(", $._expression, ")")
     )
   }
