@@ -22,6 +22,10 @@
         {
           "type": "name",
           "named": true
+        },
+        {
+          "type": "train",
+          "named": true
         }
       ]
     }
@@ -48,6 +52,10 @@
         },
         {
           "type": "name",
+          "named": true
+        },
+        {
+          "type": "train",
           "named": true
         }
       ]
@@ -98,6 +106,41 @@
         },
         {
           "type": "name",
+          "named": true
+        },
+        {
+          "type": "train",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "train",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "function",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "literal",
+          "named": true
+        },
+        {
+          "type": "name",
+          "named": true
+        },
+        {
+          "type": "train",
           "named": true
         }
       ]

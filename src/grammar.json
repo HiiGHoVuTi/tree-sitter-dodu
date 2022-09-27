@@ -10,7 +10,7 @@
     },
     "identifier": {
       "type": "PATTERN",
-      "value": "([^ \\[\\]\\(\\),;\\n\\t\\\\.0-9])+"
+      "value": "([^ \\[\\]\\(\\)\\{\\},;\\n\\t\\\\.0-9])+"
     },
     "_declaration": {
       "type": "SEQ",
@@ -219,7 +219,7 @@
         }
       ]
     },
-    "_train": {
+    "train": {
       "type": "SEQ",
       "members": [
         {
@@ -233,13 +233,8 @@
               "type": "SEQ",
               "members": [
                 {
-                  "type": "ALIAS",
-                  "content": {
-                    "type": "SYMBOL",
-                    "name": "_term"
-                  },
-                  "named": true,
-                  "value": "function"
+                  "type": "SYMBOL",
+                  "name": "_term"
                 },
                 {
                   "type": "SYMBOL",
@@ -255,13 +250,8 @@
                   "name": "_term"
                 },
                 {
-                  "type": "ALIAS",
-                  "content": {
-                    "type": "SYMBOL",
-                    "name": "_term"
-                  },
-                  "named": true,
-                  "value": "function"
+                  "type": "SYMBOL",
+                  "name": "_term"
                 },
                 {
                   "type": "SYMBOL",
@@ -290,7 +280,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "_train"
+          "name": "train"
         },
         {
           "type": "SEQ",

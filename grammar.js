@@ -1,4 +1,4 @@
-const glyph = /([^ \[\]\(\),;\n\t\\.0-9])+/;
+const glyph = /([^ \[\]\(\)\{\},;\n\t\\.0-9])+/;
 
 module.exports = grammar({
   name: "dodu",
@@ -45,16 +45,16 @@ module.exports = grammar({
     _composition: $ => seq(
       $._application, ",", $._expression
     ),
-    _train: $ => seq(
+    train: $ => seq(
       "{", choice(
-        seq(alias($._term, $.function), $._term),
-        seq($._term, alias($._term, $.function), $._term)
+        seq($._term, $._term),
+        seq($._term, $._term, $._term)
       ), "}"
     ),
     _term: $ => choice(
       $.literal,
       $.identifier,
-      $._train,
+      $.train,
       seq("(", $._expression, ")")
     )
   }
